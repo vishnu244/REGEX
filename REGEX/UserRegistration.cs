@@ -13,7 +13,7 @@ namespace REGEX
         {
             Console.WriteLine("Enter First Name");
             string Firstname = Console.ReadLine();
-            string firstname = "[A-Z]{1}[a-z]{2,}";
+            string firstname = "^[A-Z]{1}[a-z]{2,}$";
             Regex regex = new Regex(firstname);
             
             if (regex.IsMatch(Firstname))
@@ -31,7 +31,7 @@ namespace REGEX
         {
             Console.WriteLine("Enter Last Name");
             string Lastname = Console.ReadLine();
-            string lasttname = "[A-Z]{1}[a-z]{2,}";
+            string lasttname = "^[A-Z]{1}[a-z]{2,}$";
             Regex regex = new Regex(lasttname);
 
             if (regex.IsMatch(Lastname))
@@ -41,6 +41,24 @@ namespace REGEX
             else
             {
                 Console.Write("Plase Enter valid Last Name(Last Name must start with Capital Letter and has minimum of 3characters) \n");
+            }
+
+        }
+
+        public void EmailID()
+        {
+            Console.WriteLine("Enter EmailID");
+            string EmailID = Console.ReadLine();
+            string emailID = "^[a-z]+(.[a-z])+@[A-Za-z]+.[a-z]{2,3}(.[a-z]{2})?$";
+            Regex regex = new Regex(emailID);
+
+            if (regex.IsMatch(EmailID))
+            {
+                Console.Write("EmailID is Valid \n");
+            }
+            else
+            {
+                Console.Write("Plase Enter valid EmailID \n");
             }
 
         }

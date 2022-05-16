@@ -19,5 +19,9 @@ while (true)
             UserRegistration userRegistration1 = new UserRegistration();
             userRegistration1.LastName();
             break;
+        case 3:
+            UserRegistration EmailID = new UserRegistration();
+            EmailID.EmailID();
+            break;
     }
 }
