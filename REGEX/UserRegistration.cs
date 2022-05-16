@@ -126,7 +126,7 @@ namespace REGEX
         {
             Console.WriteLine("Enter Password");
             var PasswordRule3 = (Console.ReadLine());
-            var passwordRule3 = "^(?=.*[0-9])[0-9a-zA-z]{8,}$";
+            var passwordRule3 = "^(?=.*[0-9A-Z])[0-9a-zA-z]{8,}$";
 
             Regex regex = new Regex(passwordRule3);
 
@@ -141,6 +141,7 @@ namespace REGEX
 
         }
 
+        
 
     }
 }
