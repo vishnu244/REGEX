@@ -26,6 +26,23 @@ namespace REGEX
             }
 
         }
-      
+
+        public void LastName()
+        {
+            Console.WriteLine("Enter Last Name");
+            string Lastname = Console.ReadLine();
+            string lasttname = "[A-Z]{1}[a-z]{2,}";
+            Regex regex = new Regex(lasttname);
+
+            if (regex.IsMatch(Lastname))
+            {
+                Console.Write("Name is Valid \n");
+            }
+            else
+            {
+                Console.Write("Plase Enter valid Last Name(Last Name must start with Capital Letter and has minimum of 3characters) \n");
+            }
+
+        }
     }
 }
