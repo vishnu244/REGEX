@@ -82,5 +82,26 @@ namespace REGEX
             }
 
         }
+
+        public void Password()
+        {
+            Console.WriteLine("Enter Password");
+            var Password = (Console.ReadLine());
+            var password = "^[0-9a-zA-Z]{8,}$";
+
+            Regex regex = new Regex(password);
+
+            if (regex.IsMatch(Password))
+            {
+                Console.Write("Password is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter valid Password \n");
+            }
+
+        }
+
+
     }
 }
