@@ -22,7 +22,7 @@ namespace REGEX
             }
             else
             {
-                Console.Write("Plase Enter First Letter Capital \n");
+                Console.Write("Please Enter First Letter Capital \n");
             }
 
         }
@@ -40,7 +40,7 @@ namespace REGEX
             }
             else
             {
-                Console.Write("Plase Enter valid Last Name(Last Name must start with Capital Letter and has minimum of 3characters) \n");
+                Console.Write("Please Enter valid Last Name(Last Name must start with Capital Letter and has minimum of 3characters) \n");
             }
 
         }
@@ -49,7 +49,8 @@ namespace REGEX
         {
             Console.WriteLine("Enter EmailID");
             string EmailID = Console.ReadLine();
-            string emailID = "^[a-z]+(.[a-z])+@[A-Za-z]+.[a-z]{2,3}(.[a-z]{2})?$";
+            //string emailID = "^[a-z](.[a-z])+@[A-Za-z]+.[a-z]{2,4}(.[a-z]{2})?$";
+            string emailID = "^[A-Za-z](.[a-z])+@[A-Za-z]+.[a-z]{2,4}(.[a-z]{2,3})?$";
             Regex regex = new Regex(emailID);
 
             if (regex.IsMatch(EmailID))
@@ -58,7 +59,26 @@ namespace REGEX
             }
             else
             {
-                Console.Write("Plase Enter valid EmailID \n");
+                Console.Write("Please Enter valid EmailID \n");
+            }
+
+        }
+        
+        public void MobileNumber()
+        {
+            Console.WriteLine("Enter MobileNumber");
+            var MobileNumber =(Console.ReadLine());
+            var mobilenumber = "^[0-9]{2}\\s[0-9]{10}$";
+
+            Regex regex = new Regex(mobilenumber);
+
+            if (regex.IsMatch(MobileNumber))
+            {
+                Console.Write("Mobile Number is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter valid Mobile Number \n");
             }
 
         }
