@@ -35,6 +35,10 @@ while (true)
             UserRegistration PasswordR2 = new UserRegistration();
             PasswordR2.PasswordRule2();
             break;
+        case 7:
+            UserRegistration PasswordR3 = new UserRegistration();
+            PasswordR3.PasswordRule2();
+            break;
         default:
             Console.WriteLine("Please select the above options only");
             break;
