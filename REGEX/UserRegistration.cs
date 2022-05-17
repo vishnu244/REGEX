@@ -87,7 +87,7 @@ namespace REGEX
         {
             Console.WriteLine("Enter Password");
             var Password = (Console.ReadLine());
-            var password = "^[A-Z]+[0-9a-zA-Z]{8,}$";
+            var password = "^[0-9a-zA-Z]{8,}$";
             //var password = "^(?=.*[A-Z])[0-9a-zA-z]{8,}$";
 
             Regex regex = new Regex(password);
@@ -107,7 +107,7 @@ namespace REGEX
         {
             Console.WriteLine("Enter Password");
             var PasswordRule2 = (Console.ReadLine());
-            var passwordRule2 = "^(?=.*[A-Z])[0-9a-zA-z]{8,}$";
+            var passwordRule2 = "^(?=.*[A-Z])[0-9a-zA-Z]{8,}$";
 
             Regex regex = new Regex(passwordRule2);
 
@@ -126,7 +126,7 @@ namespace REGEX
         {
             Console.WriteLine("Enter Password");
             var PasswordRule3 = (Console.ReadLine());
-            var passwordRule3 = "^(?=.*[0-9A-Z])[0-9a-zA-z]{8,}$";
+            var passwordRule3 = "^(?=.*[0-9A-Z])[0-9a-zA-Z]{8,}$";
 
             Regex regex = new Regex(passwordRule3);
 
@@ -141,7 +141,25 @@ namespace REGEX
 
         }
 
-        
+        public void PasswordRule4()
+        {
+            Console.WriteLine("Enter Password");
+            var PasswordRule4 = (Console.ReadLine());
+            var passwordRule4 = "^(?=.*[@#$%0-9A-Z])[@#$%0-9a-zA-Z]{8,}$";
+
+            Regex regex = new Regex(passwordRule4);
+
+            if (regex.IsMatch(PasswordRule4))
+            {
+                Console.Write("Password is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter valid Password \n");
+            }
+
+        }
+
 
     }
 }
