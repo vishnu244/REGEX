@@ -69,7 +69,8 @@ namespace REGEX
         public bool MobileNumber(string Mnumber)
         {
             bool status;            
-            var mobilenumber = "^[0-9]{2}\\s[0-9]{10}$";
+            //var mobilenumber = "^[0-9]{2}\\s[0-9]{10}$";
+            var mobilenumber = "^[+]{1}[1-9]{2}\\s[6-9]{1}[0-9]{9}$";
             Regex regex = new Regex(mobilenumber);
 
             if (regex.IsMatch(Mnumber))
