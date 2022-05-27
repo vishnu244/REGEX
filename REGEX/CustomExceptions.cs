@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-/*
+
 namespace REGEX
 {
     public class CustomExceptions : Exception
@@ -13,9 +13,7 @@ namespace REGEX
         {
             InvalidFirstName, InvalidLastName, 
             InvalidEmailId, InvalidMobileNumber,
-            InvalidPasswordRule,
-            InvalidSampleEmailId
-
+            InvalidPasswordRule
         }
         public readonly ValidationMessage Type;
 
@@ -79,7 +77,7 @@ namespace REGEX
                 if (regex.IsMatch(message))
                 {
                     Console.Write("Name is Valid \n");
-                    return message;
+                    return "Name is Valid ";
                 }
                 else
                 {
@@ -113,7 +111,7 @@ namespace REGEX
                 if (regex.IsMatch(message))
                 {
                     Console.Write("EmailID is Valid \n");
-                    return message;
+                    return "EmailID is Valid ";
                 }
                 else
                 {
@@ -147,7 +145,7 @@ namespace REGEX
                 if (regex.IsMatch(message))
                 {
                     Console.Write("MobileNumber is Valid \n");
-                    return message;
+                    return "MobileNumber is Valid ";
                 }
                 else
                 {
@@ -182,7 +180,7 @@ namespace REGEX
                 if (regex.IsMatch(message))
                 {
                     Console.Write("Password is Valid \n");
-                    return message;
+                    return "Password is Valid ";
                 }
                 else
                 {
@@ -201,4 +199,3 @@ namespace REGEX
     }
 
 }
-*/

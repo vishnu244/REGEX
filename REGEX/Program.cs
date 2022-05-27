@@ -90,11 +90,11 @@ while (true)
             Console.WriteLine(Mobilenumber);
             break;
 
-        /*case 14:
+        case 14:
             CustomUserregistration C5 = new CustomUserregistration();
             string PasswordRule = C5.CustomException_InvalidPasswordRule("Vish#123");
             Console.WriteLine(PasswordRule);
-            break;*/
+            break;
         case 15:
             UserRegistration l1 = new();
             Console.WriteLine("enter firstname");
