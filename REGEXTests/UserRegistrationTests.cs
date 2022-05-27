@@ -39,8 +39,8 @@ namespace REGEX.Tests
         public void MobileNumberTest()
         {
             UserRegistration UR4 = new UserRegistration();
-            UR4.MobileNumber("91 9919819801");
-            Assert.AreEqual(true, UR4.MobileNumber("91 9919819801"));
+            UR4.MobileNumber("+91 9919819801");
+            Assert.AreEqual(true, UR4.MobileNumber("+91 9919819801"));
         }
         
         [TestMethod()]
@@ -73,6 +73,23 @@ namespace REGEX.Tests
             UserRegistration UR8 = new UserRegistration();
             UR8.PasswordRule4("PassWordRule@4");
             Assert.AreEqual(true, UR8.PasswordRule4("PassWordRule@4"));
+        }
+
+        [TestMethod()]
+        public void PasswordRule4Test1()
+        {
+            try
+            {
+                UserRegistration UR8 = new UserRegistration();
+                UR8.PasswordRule4("PassWordRule@4");
+                Assert.AreEqual(true, UR8.PasswordRule4("776g"));
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
         }
     }
 }
